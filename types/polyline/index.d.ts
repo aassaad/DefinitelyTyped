@@ -10,6 +10,7 @@ interface Polyline {
   decode(string: string, precision?: number): number[][];
   encode(coordinate: number[][], precision?: number): string;
   fromGeoJSON(geojson: GeoJSON.LineString | GeoJSON.Feature<GeoJSON.LineString>, precision?: number): string;
+  toGeoJSON(str: string, precision?: number): GeoJSON.LineString;
 }
 
 declare var polyline: Polyline;
